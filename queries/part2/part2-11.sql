@@ -1,0 +1,3 @@
+--What are the titles of the stories that have been reprinted at least 30 times? Print the reprint count along with the
+--title. Order the output by the reprint count descending (higher to lower).
+--Output schema: {Story Title, Reprint Count}

@@ -1,0 +1,2 @@
+--Which heroes are featured in stories (feature attribute) that have all three genres: humor, crime, and romance.
+--Output schema: {Feature}
