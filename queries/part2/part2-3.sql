@@ -16,26 +16,26 @@ ORDER BY gs.NAME ASC
 
 -- RESULT -- (21 results)
 
-Series Name                                         |
-----------------------------------------------------+
-120 Rue de la Gare                                  |
-25 images de la passion d'un homme                  |
-Affentheater                                        |
-Alack Sinner                                        |
-Alans Kindheit                                      |
-Alans Krieg                                         |
-Das Geheimnis des Würgers                           |
-Den Letzten beissen die Hunde                       |
-Der Fotograf                                        |
-Die Reportage                                       |
-Ein Leben in China                                  |
-Elender Krieg  - Gesamtausgabe                      |
-Family Living                                       |
-Gaza                                                |
-Golem im Emmental                                   |
-Jetzt kommt später                                  |
-Le Soleil                                           |
-Palästina                                           |
-Victor Levallois                                    |
-Voyages et aventures surprenantes de Robinson Crusoé|
-Who killed Professor X?                             |
+--Series Name                                         |
+------------------------------------------------------+
+--120 Rue de la Gare                                  |
+--25 images de la passion d'un homme                  |
+--Affentheater                                        |
+--Alack Sinner                                        |
+--Alans Kindheit                                      |
+--Alans Krieg                                         |
+--Das Geheimnis des Würgers                           |
+--Den Letzten beissen die Hunde                       |
+--Der Fotograf                                        |
+--Die Reportage                                       |
+--Ein Leben in China                                  |
+--Elender Krieg  - Gesamtausgabe                      |
+--Family Living                                       |
+--Gaza                                                |
+--Golem im Emmental                                   |
+--Jetzt kommt später                                  |
+--Le Soleil                                           |
+--Palästina                                           |
+--Victor Levallois                                    |
+--Voyages et aventures surprenantes de Robinson Crusoé|
+--Who killed Professor X?                             |

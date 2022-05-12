@@ -18,21 +18,21 @@ ORDER BY COUNT(gs.ID) DESC
 
 -- RESULT --
 
-Publisher ID|Publisher Name         |
-------------+-----------------------+
-        2693|Panini                 |
-       10349|RW Edizioni            |
-       10056|Bel-Ami Edizioni       |
-         969|Kappa Edizioni         |
-         324|Max Bunker Press       |
-       10963|Cliquot                |
-         397|Milano Libri Edizioni  |
-       10355|Andrea Leggeri         |
-        3166|Rizzoli                |
-         845|Edizioni BD            |
-         440|Edizioni LIsola Trovata|
-       10209|7even Age Entertainment|
-        4881|001 Edizioni           |
-         164|Sergio Bonelli Editore |
-         442|EPC                    |
-        1177|Bonelli-Dargaud        |
+--Publisher ID|Publisher Name         |
+--------------+-----------------------+
+--        2693|Panini                 |
+--       10349|RW Edizioni            |
+--       10056|Bel-Ami Edizioni       |
+--         969|Kappa Edizioni         |
+--         324|Max Bunker Press       |
+--       10963|Cliquot                |
+--         397|Milano Libri Edizioni  |
+--       10355|Andrea Leggeri         |
+--        3166|Rizzoli                |
+--         845|Edizioni BD            |
+--         440|Edizioni LIsola Trovata|
+--       10209|7even Age Entertainment|
+--        4881|001 Edizioni           |
+--         164|Sergio Bonelli Editore |
+--         442|EPC                    |
+--        1177|Bonelli-Dargaud        |
