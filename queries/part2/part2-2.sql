@@ -14,25 +14,25 @@ WHERE gs.PUBLISHER_ID = gp.ID
 						FROM STDDATA_LANGUAGE sl
 						WHERE sl.CODE = 'it')
 GROUP BY gp.ID, gp.NAME 
-ORDER BY COUNT(gs.ID) DESC  
+ORDER BY gp.ID DESC  
 
 -- RESULT --
 
 --Publisher ID|Publisher Name         |
 --------------+-----------------------+
---        2693|Panini                 |
---       10349|RW Edizioni            |
---       10056|Bel-Ami Edizioni       |
---         969|Kappa Edizioni         |
---         324|Max Bunker Press       |
 --       10963|Cliquot                |
---         397|Milano Libri Edizioni  |
 --       10355|Andrea Leggeri         |
---        3166|Rizzoli                |
---         845|Edizioni BD            |
---         440|Edizioni LIsola Trovata|
+--       10349|RW Edizioni            |
 --       10209|7even Age Entertainment|
+--       10056|Bel-Ami Edizioni       |
 --        4881|001 Edizioni           |
---         164|Sergio Bonelli Editore |
---         442|EPC                    |
+--        3166|Rizzoli                |
+--        2693|Panini                 |
 --        1177|Bonelli-Dargaud        |
+--         969|Kappa Edizioni         |
+--         845|Edizioni BD            |
+--         442|EPC                    |
+--         440|Edizioni LIsola Trovata|
+--         397|Milano Libri Edizioni  |
+--         324|Max Bunker Press       |
+--         164|Sergio Bonelli Editore |
