@@ -8,9 +8,9 @@
 --result once you combine purely Marvel heroes with crossover heroes, you match their names partially as well!
 --Output schema: {Crossover Feature Heroes} 
 
-SELECT feature AS "Crossover Feature Heroes"
+SELECT DISTINCT hero_marvel AS "Crossover Feature Heroes"
 FROM(
-    SELECT DISTINCT gs.FEATURE feature 
+    SELECT DISTINCT gs.FEATURE hero_marvel 
     FROM GCD_STORY gs
     WHERE gs.ISSUE_ID IN(
         SELECT gi.ID 
@@ -20,14 +20,13 @@ FROM(
             SELECT gip.id 
             FROM GCD_INDICIA_PUBLISHER gip 
             WHERE lower(gip.NAME) LIKE '%marvel%' 
-            AND lower(gip.NAME) LIKE '%dc%' 
+            AND lower(gip.NAME) NOT LIKE '%dc%' 
         )
     )
-)
-WHERE EXISTS (
-    SELECT *
-    FROM GCD_STORY gs2 
-    WHERE gs2.FEATURE = feature AND  gs2.ISSUE_ID IN(
+), (
+    SELECT DISTINCT gs2.FEATURE hero_cross 
+    FROM GCD_STORY gs2
+    WHERE gs2.ISSUE_ID IN(
         SELECT gi2.ID 
         FROM GCD_ISSUE gi2 
         WHERE gi2.INDICIA_PUBLISHER_ID IN
@@ -35,27 +34,32 @@ WHERE EXISTS (
             SELECT gip2.id 
             FROM GCD_INDICIA_PUBLISHER gip2
             WHERE lower(gip2.NAME) LIKE '%marvel%' 
+            AND lower(gip2.NAME) LIKE '%dc%' 
         )
     )
 )
+WHERE hero_cross IS NOT NULL AND hero_marvel IS NOT NULL AND 
+lower(hero_cross) LIKE concat(concat('%', lower(hero_marvel)),'%')
 
 -- RESULT --
 
 --Crossover Feature Heroes                
 -------------------------------------
+--X-men
+--It
 --Superman; Spider-Man
+--Wizard
 --Batman
---Wizard of Oz
---Hulk
 --Spider-Man
+--Hulk
 --Superman
---
---Teen Titans; X-Men
---Spider-Man; Superman
---Batman; Hulk
---X-Men; Teen Titans
+--Wizard of Oz
+--Titan
+--Doctor Octopus
+--Spider-man
+--Thor
 --Kitty Pryde
---Joker
---New Teen Titans; X-Men
---Superman and Spider-Man
+--Oz
+--X-Men
 --Lex Luthor; Doctor Octopus
+--Superman and Spider-Man
