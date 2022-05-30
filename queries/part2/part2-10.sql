@@ -3,20 +3,22 @@
 
 SELECT count(*) AS "Number"
 FROM (
-    SELECT sc.NAME
-    FROM GCD_PUBLISHER gp, STDDATA_COUNTRY sc 
-    WHERE sc.ID = gp.COUNTRY_ID AND gp.ID IN (
+    SELECT gp.NAME
+    FROM GCD_PUBLISHER gp
+    WHERE gp.ID IN (
         SELECT gs.PUBLISHER_ID 
         FROM GCD_SERIES gs 
         WHERE NOT gs.COUNTRY_ID = gp.COUNTRY_ID 
     )
-    GROUP BY sc.NAME  
-    HAVING COUNT(gp.ID) = 1 
+    AND NOT gp.ID IN (
+        SELECT gs.PUBLISHER_ID 
+        FROM GCD_SERIES gs 
+        WHERE gs.COUNTRY_ID = gp.COUNTRY_ID 
+    )
 )
-
 
 -- RESULT --
 
 --Number             
 -------------------------------------
---12
+--29
