@@ -11,7 +11,7 @@ SELECT sc.NAME AS "Country Name", MAX(D.DUR) AS "Max Years Publishing Per Countr
 FROM STDDATA_COUNTRY sc, (	
 		SELECT gp.COUNTRY_ID AS ID, gp.YEAR_ENDED - gp.YEAR_BEGAN AS DUR
 		FROM GCD_PUBLISHER gp 
-		WHERE gp.YEAR_BEGAN >= 1600 AND gp.YEAR_ENDED <= 2000 ) D
+		WHERE gp.YEAR_BEGAN >= 1600 AND gp.YEAR_ENDED <= 2020 ) D
 WHERE sc.ID = D.ID
 GROUP BY sc.NAME 
 ORDER BY "Max Years Publishing Per Country" DESC 
